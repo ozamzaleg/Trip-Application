@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Search_Places"
+    android:background="@drawable/background"
+    >
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="126dp"
+        android:layout_height="55dp"
+        android:paddingBottom="30dp" />
+
+    <Spinner
+        android:id="@+id/spinnerArea"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner1"
+
+        android:layout_marginTop="271dp"
+        android:layout_marginBottom="140dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="93dp"
+        android:text="@string/app_name" />
+
+
+</RelativeLayout>

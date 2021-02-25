@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Trip_application</string>
+    <string-array name="Type">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
+    <string-array name="Area">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
+
+</resources>
