@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:isIndicator="true"
         android:numStars="5"
-        android:stepSize="1" />
+        android:stepSize="0.5" />
 
     <TextView
         android:id="@+id/comment_list_LBL_comment"
