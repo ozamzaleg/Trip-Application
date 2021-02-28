@@ -5,12 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_List_Places">
+    tools:context=".activities.Activity_List_Places"
+    android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_margin="2dp"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/list_places_LAY_appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/list_places_TLB_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="@string/places"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/list_places_LAY_viewPager"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 
 </LinearLayout>

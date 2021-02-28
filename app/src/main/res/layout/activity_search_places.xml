@@ -1,36 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Search_Places"
-    android:background="@drawable/background"
-    >
+    android:orientation="vertical"
+    tools:context=".activities.Activity_Search_Places">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/comment_LAY_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/comment_TLB_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="@string/search"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="126dp"
-        android:layout_height="55dp"
-        android:paddingBottom="30dp" />
+    <LinearLayout
+    android:id="@+id/search_places_LAN_kind"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/spinnerArea"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/spinner1"
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:text="kind:"
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp" />
 
-        android:layout_marginTop="271dp"
-        android:layout_marginBottom="140dp" />
+    <ImageView
+        android:id="@+id/search_places_IMG_park"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/park"/>
+    <ImageView
+        android:id="@+id/search_places_IMG_beaches"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/beaches"/>
+    <ImageView
+        android:id="@+id/search_places_IMG_trip"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/trip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_places_LAN_area"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/search_places_LAN_kind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:text="area:"/>
+
+        <ImageView
+            android:id="@+id/search_places_IMG_sorth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/sorth"/>
+        <ImageView
+            android:id="@+id/search_places_IMG_north"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/north"/>
+        <ImageView
+            android:id="@+id/search_places_IMG_center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/center"/>
+        <ImageView
+            android:id="@+id/search_places_IMG_jerusalem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/jerusalem"/>
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/search_BTN"
-        android:layout_width="wrap_content"
+        android:id="@+id/search_places_BTN_addPlace"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="#2196F3"
+        app:cornerRadius="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="93dp"
-        android:text="@string/app_name" />
+        android:text="ADD PLACE"
+        android:layout_margin="30dp"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_places_BTN_search"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="#2196F3"
+        app:cornerRadius="20dp"
+        android:layout_above="@+id/search_places_BTN_addPlace"
+        android:layout_width="match_parent"
+       android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        />
 
 
 </RelativeLayout>
