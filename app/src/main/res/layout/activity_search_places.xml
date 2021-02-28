@@ -30,70 +30,70 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="100dp"
-        android:layout_marginStart="5dp"
     android:orientation="horizontal">
 
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
         android:text="Kind:"
+        android:layout_marginStart="5dp"
         android:layout_gravity="center_vertical"
-        android:textSize="20sp" />
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:orientation="vertical">
-    <ImageView
-        android:id="@+id/search_places_IMG_park"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:src="@drawable/park"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parks"
-        android:layout_gravity="center"
-        android:textSize="15sp"/>
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-    <ImageView
-        android:id="@+id/search_places_IMG_beaches"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:src="@drawable/beaches"/>
-        <TextView
+        android:textSize="20sp"/>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Beaches:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_park"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/park"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parks"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_beaches"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/beaches"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beaches"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <ImageView
-        android:id="@+id/search_places_IMG_trip"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-            android:layout_gravity="center"
-        android:src="@drawable/trip"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trip:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/search_places_IMG_trip"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/trip"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -111,78 +111,78 @@
             android:layout_gravity="center_vertical"
             android:textSize="20sp"
             android:text="Area:"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/search_places_IMG_sorth"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/sorth"/>
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="South:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/search_places_IMG_north"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/north"/>
-        <TextView
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_sorth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sorth"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="South"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="North:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/search_places_IMG_center"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/center"/>
-        <TextView
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_north"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/north"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="North"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Center:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/search_places_IMG_jerusalem"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/jerusalem"/>
-        <TextView
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Center"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jerusalem:"
-            android:layout_gravity="center"
-            android:textSize="15sp"/>
-    </LinearLayout>
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/search_places_IMG_jerusalem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/jerusalem"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jerusalem"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton

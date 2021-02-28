@@ -12,6 +12,7 @@
     <string name="name">Name</string>
     <string name="comment">Comment</string>
     <string name="add_comment">Add Comment</string>
+    <string name="add_place">Add Place</string>
     <string name="places">Places</string>
     <string name="search">Search Place</string>
     <string name="google_map_keys">AIzaSyDYV6bLMCVrf9WDiTaRMa0WygB2xox_WYM</string>

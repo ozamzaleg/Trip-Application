@@ -21,6 +21,7 @@ private String pid;
         setContentView(R.layout.activity_comment);
         initView();
     }
+
 private void initView(){
         pid=getIntent().getStringExtra(Constant.EXTRA_PLACE_KEY);
          Bundle bundle=new Bundle();
