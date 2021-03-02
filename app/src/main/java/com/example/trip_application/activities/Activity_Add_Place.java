@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -144,13 +145,18 @@ public class Activity_Add_Place extends Activity_Base  {
     }
 
     private void setPlace() {
+        double cost=0.0;
+        try {
+            cost = Double.parseDouble(add_place_EDT_cost.getEditText().getText().toString());
+        }catch (Exception e){
+        }
         Place place = new Place()
                 .setPid(UUID.randomUUID().toString())
                 .setArea(area)
                 .setType(type)
                 .setName(add_place_EDT_name.getEditText().getText().toString())
                 .setDescription(add_place_EDT_description.getEditText().getText().toString())
-                .setCost(Double.parseDouble(add_place_EDT_cost.getEditText().getText().toString()))
+                .setCost(cost)
                 .setAddress(add_place_EDT_address.getEditText().getText().toString());
         setAddress(place);
         saveImageToDB(place);

@@ -16,6 +16,7 @@ public class Place {
     private double latitude=0.0;
     private double longitude=0.0;
     private int numberOfComments=0;
+
     public Place(){
 
     }
