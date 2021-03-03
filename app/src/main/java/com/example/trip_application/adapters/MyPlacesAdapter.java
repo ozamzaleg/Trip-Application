@@ -70,6 +70,7 @@ public class MyPlacesAdapter extends RecyclerView.Adapter<MyPlacesAdapter.MyView
 
     public interface ItemClickListener {
         void onItemClick(View view, int position);
+        void onItemDelete(View view, int position);
     }
 
 
@@ -80,6 +81,7 @@ public class MyPlacesAdapter extends RecyclerView.Adapter<MyPlacesAdapter.MyView
         TextView item_list_LBL_name;
         RatingBar item_list_RTB_rating ;
         TextView item_list_LBL_comments;
+        ImageView trip_item_list_IMG_trash;
 
         MyViewHolder(View itemView) {
             super(itemView);
@@ -88,6 +90,7 @@ public class MyPlacesAdapter extends RecyclerView.Adapter<MyPlacesAdapter.MyView
             item_list_RTB_rating = itemView.findViewById(R.id.item_list_RTB_rating);
             item_list_IMG_image=itemView.findViewById(R.id.item_list_IMG_image);
             item_list_LBL_comments=itemView.findViewById(R.id.item_list_LBL_comments);
+            trip_item_list_IMG_trash=itemView.findViewById(R.id.trip_item_list_IMG_trash);
             context=itemView.getContext();
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +98,14 @@ public class MyPlacesAdapter extends RecyclerView.Adapter<MyPlacesAdapter.MyView
                 public void onClick(View v) {
                     if (mClickListener != null) {
                         mClickListener.onItemClick(v, getAdapterPosition());
+                    }
+                }
+            });
+            trip_item_list_IMG_trash.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mClickListener != null) {
+                        mClickListener.onItemDelete(v, getAdapterPosition());
                     }
                 }
             });

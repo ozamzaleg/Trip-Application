@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import com.example.trip_application.objects.Comment;
 import com.example.trip_application.objects.Place;
 import com.example.trip_application.utils.Constant;
 
+import com.google.firebase.auth.PlayGamesAuthCredential;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -60,12 +62,12 @@ private void initView() {
     }
 
     private void readPlaces(){
-        ArrayList<Place> places =new ArrayList<>();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference(Constant.PLACES_DB);
         myRef.child(area.toString()).child(type.toString()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                ArrayList<Place> places =new ArrayList<>();
                 for (DataSnapshot placeSnapshot:dataSnapshot.getChildren()) {
                     places.add(placeSnapshot.getValue(Place.class));
                 }
@@ -114,7 +116,21 @@ private void initView() {
             public void onItemClick(View view, int position) {
                 openDescription(places.get(position));
             }
+
+            @Override
+            public void onItemDelete(View view, int position) {
+                deleteItem(places.get(position));
+            }
         });
         list_places_LST_places.setAdapter(adapter_place);
+    }
+
+    private void deleteItem(Place place) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(Constant.PLACES_DB);
+        myRef.child(place.getArea().toString()).child(place.getType().toString()).child(place.getPid()).removeValue();
+        myRef=database.getReference(Constant.COMMENTS_DB);
+        myRef.child(place.getPid()).removeValue();
+
     }
 }
